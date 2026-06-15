@@ -1,8 +1,9 @@
 {
     "version": 2,
+    "framework": null,
     "functions": {
         "api/index.php": {
-            "runtime": "vercel-php@0.6.2"
+            "runtime": "vercel-php@0.7.5"
         }
     },
     "routes": [
@@ -11,13 +12,12 @@
             "dest": "/public/build/$1"
         },
         {
+            "src": "/(css|js|images|assets)/(.*)",
+            "dest": "/public/$1/$2"
+        },
+        {
             "src": "/(.*)",
             "dest": "/api/index.php"
         }
-    ],
-    "env": {
-        "APP_ENV": "production",
-        "APP_DEBUG": "true",
-        "LOG_CHANNEL": "stderr"
-     }
+    ]
 }
