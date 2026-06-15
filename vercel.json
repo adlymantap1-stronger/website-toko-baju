@@ -1,9 +1,9 @@
 {
     "version": 2,
-    "images": {
-        "sizes": [256, 384],
-        "domains": [],
-        "minimumCacheTTL": 60
+    "functions": {
+        "api/index.php": {
+            "runtime": "vercel-php@0.7.5"
+        }
     },
     "routes": [
         {
